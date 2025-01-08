@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Homepage</title>
+    <link rel="stylesheet" href="lab7.css">
+</head>
+<body>
+    <header>
+        <div class="transparent-image-text">
+            <h1>Welcome to My Interactive Homepage</h1>
+            <p>Explore, Engage, Enjoy</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-on-image">
+            <form>
+                <h2>Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Submit</button>
+                <p id="form-feedback"></p>
+            </form>
+        </section>
+
+        <nav class="side-navigation">
+            <ul>
+                <li><a href="#profile-card">Profile Card</a></li>
+                <li><a href="#slideshow">Slideshow</a></li>
+                <li><a href="#collapsible-section">FAQs</a></li>
+            </ul>
+        </nav>
+
+        <section id="slideshow" class="slideshow">
+            <div class="slides">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+            <div class="slideshow-controls">
+                <button class="prev">❮</button>
+                <button class="next">❯</button>
+            </div>
+        </section>
+
+        <section id="profile-card" class="profile-card">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h2>John Doe</h2>
+            <p>Web Developer & Designer</p>
+            <div class="social-media">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">GitHub</a>
+                <a href="#" target="_blank">Twitter</a>
+            </div>
+        </section>
+
+        <section class="progress-bar-container">
+            <h3>Skill Progress</h3>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <button id="increase-progress">Increase Progress</button>
+        </section>
+
+        <section id="collapsible-section" class="collapsible-section">
+            <button class="collapsible">Click to Expand</button>
+            <div class="content">
+                <p>This is additional information or FAQs. Click the button above to toggle visibility.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="lab7.js"></script>
+</body>
+</html>
