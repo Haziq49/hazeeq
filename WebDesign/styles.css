@@ -1,0 +1,582 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    background-image: url("HomeBackground.jpg");
+}
+
+header {
+    background-color: rgb(14, 1, 71);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto;
+    margin-right: 10px; /* Space between the logo and the button */
+}
+
+header .home-button img {
+    width: 40px;
+    height: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+    color: white;
+}
+
+/* Styling the navigation links */
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Default text color */
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+/* Hover effect */
+nav a:hover {
+    color: white; /* Text color on hover */
+    background-color: rgb(14, 1, 71); /* Green background color on hover */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+/* Optional: Add active link style */
+nav a:active {
+    color: #fff;
+    background-color: rgb(14, 1, 71); /* Darker shade for active link */
+}
+
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.dashboard-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    padding: 15px;
+}
+
+.dashboard-card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.dashboard-card h3 {
+    margin: 10px 0;
+    color: #3d03dd;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(2, 34, 173, 0.836);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2f01d6;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #555;
+}
+
+.subjects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.subject-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    text-align: center;
+    padding: 15px;
+}
+
+.subject-card:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.subject-card h3 {
+    margin: 10px 0;
+    color: #3d03dd;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 5px 0;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: rgb(14, 1, 71); /* Green color for the progress */
+    border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
+}
+
+.progress-bar span {
+    font-size: 14px;
+    color: #555;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    line-height: 20px;
+}
+
+#practice-quizzes {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#practice-quizzes h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#practice-quizzes p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+#video-tutorials {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#video-tutorials h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#video-tutorials p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+/* General section styling */
+#e-books {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#e-books h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#e-books p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+/* E-book category styling */
+.ebook-category {
+    text-align: left;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ebook-category h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* List of categories */
+.ebook-category ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ebook-category li {
+    margin: 10px 0;
+}
+
+/* Category links */
+.ebook-category a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.ebook-category a:hover {
+    color: #0056b3;
+}
+
+/* Hover effect for the category items */
+.ebook-category li:hover {
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* General Styling for the Become a Tutor Section */
+#become-a-tutor {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#become-a-tutor h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#become-a-tutor p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+/* General Styling for the Become a Tutor Section */
+#tutor-profiles {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#tutor-profiles h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#tutor-profiles p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+#profile-settings {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#profile-settings h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#profile-settings p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+#notifications {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#notifications h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#notifications p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+#welcome-section {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#welcome-section h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#welcome-section p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+#announcements {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#announcements h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#announcements p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+#enrolled-subjects {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#enrolled-subjects h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#enrolled-subjects p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+#recent-activities {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#recent-activities h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#recent-activities p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+#progress-tracking {
+    background-color: #f4f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#progress-tracking h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+}
+
+#progress-tracking p {
+    font-size: 1rem;
+    color: #7a7a7a;
+    margin-bottom: 20px;
+}
+
+/* Styling the form elements */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+form input[type="file"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Styling the dropdown */
+form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #fff;
+}
+
+/* Optionally, style the dropdown when focused */
+form select:focus {
+    border-color: rgb(14, 1, 71);
+    outline: none;
+}
+
+
+/* Button Styling */
+.apply-button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: rgb(14, 1, 71);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.apply-button:hover {
+    background-color: rgb(14, 1, 71);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #become-a-tutor {
+        padding: 15px;
+    }
+
+    #become-a-tutor h2 {
+        font-size: 1.5rem;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
+
+    .apply-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+
+footer {
+    background-color: rgb(14, 1, 71);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+}

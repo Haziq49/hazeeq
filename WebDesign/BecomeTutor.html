@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Online Learning, Become a Tutor, Tutor Profiles">
+    <meta name="author" content="NokBlajo Team">
+    <title>Become a Tutor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function handleTutorApplication(event) {
+            event.preventDefault();
+            alert('Thank you for applying to become a tutor! Our team will review your application and get back to you shortly.');
+            document.getElementById('tutor-form').reset(); // Clear the form after submission
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="NokBlajo.png" alt="Logo" class="logo">
+        <button class="home-button" onclick="window.location.href='MainPage.html'">
+            <img src="HomeWebSite.png" alt="Home">
+        </button>
+        <h1>Become a Tutor</h1>
+    </header>
+    
+    <main>
+        <!-- Become a Tutor Section -->
+        <section id="become-a-tutor" class="card">
+            <h2>Become a Tutor</h2>
+            <p>We are looking for passionate and knowledgeable individuals to join our tutor network. Fill out the application form below to get started:</p>
+        
+            <!-- Application Form -->
+            <form id="tutor-form" onsubmit="handleTutorApplication(event)">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+                <label for="subject-expertise">Subject Expertise:</label>
+                <select id="subject-expertise" name="subject-expertise" required>
+                    <option value="" disabled selected>Select subjects you can teach</option>
+                    <option value="Mathematics">Mathematics</option>
+                    <option value="Physics">Physics</option>
+                    <option value="Chemistry">Chemistry</option>
+                    <option value="Biology">Biology</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="English">English</option>
+                    <option value="History">History</option>
+                    <option value="Geography">Geography</option>
+                    <option value="Literature">Literature</option>
+                    <option value="Art">Art</option>
+                </select>
+        
+                <label for="qualification">Qualifications:</label>
+                <textarea id="qualification" name="qualification" placeholder="Briefly describe your qualifications" required></textarea>
+        
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+        
+                <button type="submit" class="apply-button">Submit Application</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 NokBlajo. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>

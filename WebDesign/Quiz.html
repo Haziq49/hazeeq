@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Online Learning, Quiz, Practice Test, Education">
+    <meta name="author" content="NokBlajo Team">
+    <title>Practice Quizzes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkAnswers() {
+            const answers = {
+                q1: 'a',
+                q2: 'c',
+                q3: 'b',
+                q4: 'd'
+            };
+            let score = 0;
+            const totalQuestions = Object.keys(answers).length;
+
+            for (let i = 1; i <= totalQuestions; i++) {
+                const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (userAnswer && userAnswer.value === answers[`q${i}`]) {
+                    score++;
+                }
+            }
+
+            const resultMessage = `You scored ${score} out of ${totalQuestions}.`;
+            document.getElementById('quiz-result').innerHTML = resultMessage;
+            document.getElementById('quiz-result').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <img src="NokBlajo.png" alt="Logo" class="logo">
+        <button class="home-button" onclick="window.location.href='MainPage.html'">
+            <img src="HomeWebSite.png" alt="Home">
+        </button>
+        <h1>Practice Quizzes</h1>
+    </header>
+
+    <main>
+        <section id="practice-quizzes" class="card">
+            <h2>Take the Quiz</h2>
+            <p>Test your knowledge with the following practice questions.</p>
+
+            <!-- Quiz Form -->
+            <form id="quiz-form">
+                <!-- Question 1 -->
+                <div class="quiz-question">
+                    <h3>1. What is the formula for water?</h3>
+                    <label><input type="radio" name="q1" value="a"> H<sub>2</sub>O</label><br>
+                    <label><input type="radio" name="q1" value="b"> O<sub>2</sub>H</label><br>
+                    <label><input type="radio" name="q1" value="c"> H<sub>2</sub>O<sub>2</sub></label><br>
+                    <label><input type="radio" name="q1" value="d"> CO<sub>2</sub>H</label><br>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-question">
+                    <h3>2. Who developed the theory of relativity?</h3>
+                    <label><input type="radio" name="q2" value="a"> Isaac Newton</label><br>
+                    <label><input type="radio" name="q2" value="b"> Albert Einstein</label><br>
+                    <label><input type="radio" name="q2" value="c"> Galileo Galilei</label><br>
+                    <label><input type="radio" name="q2" value="d"> Nikola Tesla</label><br>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-question">
+                    <h3>3. What is the capital of France?</h3>
+                    <label><input type="radio" name="q3" value="a"> Rome</label><br>
+                    <label><input type="radio" name="q3" value="b"> Paris</label><br>
+                    <label><input type="radio" name="q3" value="c"> Berlin</label><br>
+                    <label><input type="radio" name="q3" value="d"> Madrid</label><br>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-question">
+                    <h3>4. What is the chemical symbol for gold?</h3>
+                    <label><input type="radio" name="q4" value="a"> Ag</label><br>
+                    <label><input type="radio" name="q4" value="b"> Fe</label><br>
+                    <label><input type="radio" name="q4" value="c"> O</label><br>
+                    <label><input type="radio" name="q4" value="d"> Au</label><br>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="button" onclick="checkAnswers()">Submit Answers</button>
+            </form>
+
+            <!-- Quiz Result -->
+            <div id="quiz-result" style="display:none; margin-top: 20px; font-size: 18px; font-weight: bold;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 NokBlajo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
