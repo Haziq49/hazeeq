@@ -7,7 +7,13 @@
     <meta name="author" content="NokBlajo Team">
     <title>Contact Us</title>
     <link rel="stylesheet" href="styles.css">
-
+    <script>
+        function handleTutorApplication(event) {
+            event.preventDefault();
+            alert('Thank you for your feedback');
+            document.getElementById('submit').reset(); // Clear the form after submission
+        }
+    </script>
 </head>
 <body>
     <header>
